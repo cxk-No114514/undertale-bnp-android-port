@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.jockeholm.undertale"
+    platformBuildVersionCode="28"
+    platformBuildVersionName="9"
+    android:allowBackup="false"
+    android:installLocation="auto"
+    android:compileSdkVersion="28"
+    android:compileSdkVersionCodename="9"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH" />
+    <uses-feature
+        android:glEsVersion="0x20000" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <supports-screens
+        android:largeScreens="true"
+        android:resizeable="true" />
+    <application
+        android:label="UNDERTALE BnP"
+        android:icon="@drawable/icon"
+        android:name="com.jockeholm.undertale.RunnerApplication"
+        android:banner="@drawable/banner"
+        android:isGame="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:label="UNDERTALE BnP"
+            android:name="com.jockeholm.undertale.RunnerActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:alwaysRetainTaskState="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+                <category
+                    android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/menu_settings"
+            android:name="com.jockeholm.undertale.RunnerPreferenceActivity" />
+        <meta-data
+            android:name="xperiaplayoptimized_content"
+            android:resource="@string/xperiaplayoptimized_content" />
+        <meta-data
+            android:name="game_display_name"
+            android:resource="@string/app_name" />
+        <meta-data
+            android:name="YYiCadeSupport"
+            android:value="true" />
+        <meta-data
+            android:name="UseShaders"
+            android:value="false" />
+        <meta-data
+            android:name="YYUse24Bit"
+            android:value="1" />
+        <meta-data
+            android:name="OrientLandscape"
+            android:value="-1" />
+        <meta-data
+            android:name="OrientPortrait"
+            android:value="0" />
+        <meta-data
+            android:name="OrientLandscapeFlipped"
+            android:value="-1" />
+        <meta-data
+            android:name="OrientPortraitFlipped"
+            android:value="0" />
+        <meta-data
+            android:name="SplashscreenTime"
+            android:value="0" />
+        <meta-data
+            android:name="SleepTimer"
+            android:value="4" />
+        <meta-data
+            android:name="IsBuiltAsYoYoRunner"
+            android:value="Yes" />
+        <meta-data
+            android:name="YYNumExtensionClasses"
+            android:value="0" />
+    </application>
+</manifest>
